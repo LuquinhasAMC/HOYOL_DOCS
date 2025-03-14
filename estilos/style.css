@@ -32,7 +32,7 @@ body{
     margin-bottom: 20px;
     background-color: white;
     border-bottom: 1px solid lightgray;
-    border-radius: 15px;
+    border-radius: 10px;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
 }
@@ -40,20 +40,19 @@ body{
 #tS{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
     color: white;
     border-bottom-right-radius: 15px;
     background-color: rgb(0, 136, 255);
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 #barEd{
     box-sizing: border-box;
     display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
     margin-bottom: 10px;
     width: 100%;
     scroll-behavior: smooth;
@@ -68,19 +67,34 @@ body{
 .barF{
     box-sizing: border-box;
     display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
     flex-direction: column;
     align-items: start;
     margin-right: 10px;
 }
 
 .titles{
+    position: relative;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(0, 36, 68);
-    border-bottom: 3px solid rgb(0, 136, 255);
     margin-bottom: 10px;
     width: 100%;
     word-break: break-word;
+}
+
+.titles::before{
+    content: "";
+    position: absolute;
+    margin-top: 1px;
+    bottom: 0%;
+    top: 100%;
+    background-color: rgb(0, 136, 255);
+    border-radius: 20px;
+    width: 60px;
+    height: 2px;
+    z-index: 2;
 }
 
 .btsB{
@@ -92,6 +106,7 @@ body{
 .btsF{
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 40px;
@@ -147,12 +162,13 @@ body{
 }
 
 .icons{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 }
 
 @media (max-width: 780px) {
     #txEd{
         width: 90%;
     }
+
 }
